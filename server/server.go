@@ -55,14 +55,9 @@ func (server *Server) initDefault() {
 
 func (server *Server) initCommands() {
 
-	definition := &slacker.CommandDefinition{
-		Description: "help!",
-		Handler: func(botCtx slacker.BotContext, request slacker.Request, response slacker.ResponseWriter) {
-			response.Reply("Your own help function...")
-		},
-	}
 	// commands
 	server.slackBot.Command(cmds.PingCommandDefinition())
+	server.slackBot.Command(cmds.RelaxCommandDefinition())
 	// help
-	server.slackBot.Help(definition)
+	server.slackBot.Help(cmds.HelpCommandDefinition())
 }

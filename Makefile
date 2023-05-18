@@ -1,3 +1,3 @@
 .PHONY: dev
 dev:
-	go run main.go
+	@go run main.go
