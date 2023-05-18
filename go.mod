@@ -3,7 +3,7 @@ module github.com/9bany/bot_workflows
 go 1.20
 
 require (
-	github.com/shomali11/slacker v1.4.1
+	github.com/shomali11/slacker v1.4.2-0.20230415075332-c38812ce2a7f
 	github.com/spf13/viper v1.15.0
 )
 

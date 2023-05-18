@@ -56,6 +56,7 @@ func (server *Server) initDefault() {
 func (server *Server) initCommands() {
 
 	// commands
+	server.slackBot.Command(cmds.GirlCommandDefinition())
 	server.slackBot.Command(cmds.PingCommandDefinition())
 	server.slackBot.Command(cmds.RelaxCommandDefinition())
 	// help

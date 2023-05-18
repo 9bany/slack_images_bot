@@ -157,6 +157,8 @@ github.com/shomali11/proper v0.0.0-20180607004733-233a9a872c30 h1:56awf1OXG6Jc2P
 github.com/shomali11/proper v0.0.0-20180607004733-233a9a872c30/go.mod h1:O723XwIZBX3FR45rBic/Eyp/DKo/YtchYFURzpUWY2c=
 github.com/shomali11/slacker v1.4.1 h1:t2R5Drx1MJXmgNejhf2cIfVmFfwEu4tRSbpYn4jfwwI=
 github.com/shomali11/slacker v1.4.1/go.mod h1:Crk6eTJrfV158YuGDbbJ8yzRS/guH7Snw4c9c/nIuE4=
+github.com/shomali11/slacker v1.4.2-0.20230415075332-c38812ce2a7f h1:Ry7NDx7ePnxkguQkK3xDPinHdQ/31QlT15Ap9Y/GT1A=
+github.com/shomali11/slacker v1.4.2-0.20230415075332-c38812ce2a7f/go.mod h1:Crk6eTJrfV158YuGDbbJ8yzRS/guH7Snw4c9c/nIuE4=
 github.com/slack-go/slack v0.12.1/go.mod h1:hlGi5oXA+Gt+yWTPP0plCdRKmjsDxecdHxYQdlMQKOw=
 github.com/slack-go/slack v0.12.2 h1:x3OppyMyGIbbiyFhsBmpf9pwkUzMhthJMRNmNlA4LaQ=
 github.com/slack-go/slack v0.12.2/go.mod h1:hlGi5oXA+Gt+yWTPP0plCdRKmjsDxecdHxYQdlMQKOw=
