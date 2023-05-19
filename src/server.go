@@ -4,8 +4,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/9bany/bot_workflows/config"
-	"github.com/9bany/bot_workflows/server/cmds"
+	"github.com/9bany/bot_workflows/src/cmds"
+	"github.com/9bany/bot_workflows/src/utils"
 	"github.com/shomali11/slacker"
 )
 
@@ -13,7 +13,7 @@ type Server struct {
 	slackBot *slacker.Slacker
 }
 
-func NewBot(config config.Config) (*Server, error) {
+func NewBot(config utils.Config) (*Server, error) {
 
 	bot := slacker.NewClient(config.BotToken, config.AppToken)
 

@@ -5,7 +5,7 @@ import (
 	"log"
 	"math/rand"
 
-	"github.com/9bany/bot_workflows/server/utils"
+	"github.com/9bany/bot_workflows/src/utils"
 	"github.com/shomali11/slacker"
 	"github.com/slack-go/slack"
 )

@@ -3,12 +3,12 @@ package main
 import (
 	"os"
 
-	"github.com/9bany/bot_workflows/config"
-	"github.com/9bany/bot_workflows/server"
+	server "github.com/9bany/bot_workflows/src"
+	"github.com/9bany/bot_workflows/src/utils"
 )
 
 func main() {
-	configuration := config.LodConfig(".")
+	configuration := utils.LodConfig(".")
 	server, err := server.NewBot(configuration)
 	if err != nil {
 		panic("Can not initialization server")
@@ -18,6 +18,6 @@ func main() {
 	if err != nil {
 		panic("Can not start server")
 	}
-	
+
 	os.Exit(0)
 }
