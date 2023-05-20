@@ -37,9 +37,10 @@ func main() {
 		log.Println("can not create driver postgres: ", err)
 	}
 
+	log.Println("config.DBName: ", config.DBName)
 	m, err := migrate.NewWithDatabaseInstance(
-		"file://src/db/migration",
-		"images",
+		"file://./src/db/migration",
+		config.DBName,
 		driver,
 	)
 	if err != nil {
