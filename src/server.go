@@ -5,20 +5,23 @@ import (
 	"log"
 
 	"github.com/9bany/bot_workflows/src/cmds"
+	db "github.com/9bany/bot_workflows/src/db/sqlc"
 	"github.com/9bany/bot_workflows/src/utils"
 	"github.com/shomali11/slacker"
 )
 
 type Server struct {
 	slackBot *slacker.Slacker
+	db       *db.Queries
 }
 
-func NewBot(config utils.Config) (*Server, error) {
+func NewBot(config utils.Config, db *db.Queries) (*Server, error) {
 
 	bot := slacker.NewClient(config.BotToken, config.AppToken)
 
 	return &Server{
 		slackBot: bot,
+		db:       db,
 	}, nil
 
 }
@@ -54,10 +57,10 @@ func (server *Server) initDefault() {
 }
 
 func (server *Server) initCommands() {
-
+	relaxCommand := cmds.NewRelaxCommand(server.db)
 	// commands
 	server.slackBot.Command(cmds.PingCommandDefinition())
-	server.slackBot.Command(cmds.RelaxCommandDefinition())
+	server.slackBot.Command(relaxCommand.CommandDefinition())
 	// help
 	server.slackBot.Help(cmds.HelpCommandDefinition())
 }

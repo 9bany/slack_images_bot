@@ -13,10 +13,10 @@ type Config struct {
 	BotToken string `mapstructure:"SLACK_BOT_TOKEN"`
 }
 
-func LodConfig(path string) Config {
+func LodConfig(path string, configName string) Config {
 	var config Config
 	viper.AddConfigPath(path)
-	viper.SetConfigName("app")
+	viper.SetConfigName(configName)
 	viper.SetConfigType("env")
 	viper.AutomaticEnv()
 	err := viper.ReadInConfig()

@@ -11,4 +11,6 @@ migratedown:
 sqlc:
 	sqlc generate
 dev:
-	@go run main.go
+	@MODE=dev go run main.go
+pro:
+	@MODE=pro go run main.go
