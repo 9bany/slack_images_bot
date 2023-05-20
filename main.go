@@ -9,6 +9,9 @@ import (
 	db "github.com/9bany/bot_workflows/src/db/sqlc"
 	"github.com/9bany/bot_workflows/src/utils"
 
+	"github.com/golang-migrate/migrate/v4"
+	"github.com/golang-migrate/migrate/v4/database/postgres"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 	_ "github.com/lib/pq"
 )
 
@@ -28,6 +31,21 @@ func main() {
 	if err != nil {
 		log.Println("got at error: ", err)
 	}
+
+	driver, err := postgres.WithInstance(conn, &postgres.Config{})
+	if err != nil {
+		log.Println("can not create driver postgres: ", err)
+	}
+
+	m, err := migrate.NewWithDatabaseInstance(
+		"file://src/db/migration",
+		"images",
+		driver,
+	)
+	if err != nil {
+		log.Println("can not create postgres migration: ", err)
+	}
+	m.Up()
 
 	queries := db.New(conn)
 
