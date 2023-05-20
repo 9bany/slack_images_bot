@@ -7,6 +7,8 @@ import (
 )
 
 type Config struct {
+	DBDriver string `mapstructure:"DB_DRIVER"`
+	DBSource string `mapstructure:"DB_SOURCE"`
 	AppToken string `mapstructure:"SLACK_APP_TOKEN"`
 	BotToken string `mapstructure:"SLACK_BOT_TOKEN"`
 }
