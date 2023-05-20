@@ -6,3 +6,9 @@ INSERT INTO images (
   $1
 )
 RETURNING *;
+
+-- name: GetImage :one
+SELECT *
+FROM images
+ORDER BY random()
+LIMIT 1;

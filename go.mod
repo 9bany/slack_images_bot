@@ -3,7 +3,9 @@ module github.com/9bany/bot_workflows
 go 1.20
 
 require (
+	github.com/lib/pq v1.10.9
 	github.com/shomali11/slacker v1.4.2-0.20230415075332-c38812ce2a7f
+	github.com/slack-go/slack v0.12.2
 	github.com/spf13/viper v1.15.0
 )
 
@@ -17,7 +19,6 @@ require (
 	github.com/robfig/cron v1.2.0 // indirect
 	github.com/shomali11/commander v0.0.0-20220716022157-b5248c76541a // indirect
 	github.com/shomali11/proper v0.0.0-20180607004733-233a9a872c30 // indirect
-	github.com/slack-go/slack v0.12.2 // indirect
 	github.com/spf13/afero v1.9.3 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
