@@ -8,6 +8,11 @@
 | Summary reporting | `/report` | Will send a message, It's collect a activity logs on your working erea  | NO  |
 | News | `/news` | Collect new feed from hacker.news, medium | NO  |
 
+## Docker
+
+```
+$ docker run --env-file ./.env ghcr.io/9bany/bot_workflows
+```
 ## Contributing
 
 If you want to colaborate check the project's issues.
