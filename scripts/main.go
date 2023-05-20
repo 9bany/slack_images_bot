@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	config := utils.LodConfig(".", "dev")
+	config := utils.LodConfig(".")
 	conn, err := sql.Open(config.DBDriver, config.DBSource)
 	if err != nil {
 		log.Println("got at error: ", err)

@@ -16,16 +16,8 @@ import (
 )
 
 func main() {
-	mode := os.Getenv("MODE")
-	log.Println("Running with mode: ", mode)
-
-	var config utils.Config
-
-	if mode == "dev" {
-		config = utils.LodConfig(".", "dev")
-	} else {
-		config = utils.LodConfig(".", "app")
-	}
+	envPathFile := os.Getenv("ENV_PATH")
+	config := utils.LodConfig(envPathFile)
 
 	conn, err := sql.Open(config.DBDriver, config.DBSource)
 	if err != nil {

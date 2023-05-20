@@ -1,9 +1,7 @@
 package utils
 
 import (
-	"log"
-
-	"github.com/spf13/viper"
+	"os"
 )
 
 type Config struct {
@@ -14,17 +12,13 @@ type Config struct {
 	BotToken string `mapstructure:"SLACK_BOT_TOKEN"`
 }
 
-func LodConfig(path string, configName string) Config {
-	var config Config
-	viper.AddConfigPath(path)
-	viper.SetConfigName(configName)
-	viper.SetConfigType("env")
-	viper.AutomaticEnv()
-	err := viper.ReadInConfig()
-	if err != nil {
-		log.Fatalf("unable to decode into struct, %v", err)
+func LodConfig(path string) Config {
+	return Config{
+		DBDriver: os.Getenv("DB_DRIVER"),
+		DBName:   os.Getenv("DB_NAME"),
+		DBSource: os.Getenv("DB_SOURCE"),
+		AppToken: os.Getenv("SLACK_APP_TOKEN"),
+		BotToken: os.Getenv("SLACK_BOT_TOKEN"),
 	}
-	viper.Unmarshal(&config)
-	return config
 
 }

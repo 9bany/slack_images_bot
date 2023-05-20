@@ -11,6 +11,6 @@ migratedown:
 sqlc:
 	sqlc generate
 dev:
-	@MODE=dev go run main.go
+	DB_DRIVER=postgres DB_NAME='images_demo' DB_SOURCE='postgresql://root:sec@localhost:5432/images_demo?sslmode=disable' SLACK_APP_TOKEN='' SLACK_BOT_TOKEN='' go run main.go
 pro:
 	@MODE=pro go run main.go
