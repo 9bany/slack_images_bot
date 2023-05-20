@@ -25,15 +25,15 @@ func (q *Queries) CreateImage(ctx context.Context, photo []byte) (Images, error)
 	return i, err
 }
 
-const getImage = `-- name: GetImage :one
+const getRanDomImage = `-- name: GetRanDomImage :one
 SELECT id, photo
 FROM images
 ORDER BY random()
 LIMIT 1
 `
 
-func (q *Queries) GetImage(ctx context.Context) (Images, error) {
-	row := q.db.QueryRowContext(ctx, getImage)
+func (q *Queries) GetRanDomImage(ctx context.Context) (Images, error) {
+	row := q.db.QueryRowContext(ctx, getRanDomImage)
 	var i Images
 	err := row.Scan(&i.ID, &i.Photo)
 	return i, err

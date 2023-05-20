@@ -7,7 +7,7 @@ INSERT INTO images (
 )
 RETURNING *;
 
--- name: GetImage :one
+-- name: GetRanDomImage :one
 SELECT *
 FROM images
 ORDER BY random()

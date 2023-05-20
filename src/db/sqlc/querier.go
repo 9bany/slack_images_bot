@@ -10,7 +10,7 @@ import (
 
 type Querier interface {
 	CreateImage(ctx context.Context, photo []byte) (Images, error)
-	GetImage(ctx context.Context) (Images, error)
+	GetRanDomImage(ctx context.Context) (Images, error)
 }
 
 var _ Querier = (*Queries)(nil)
