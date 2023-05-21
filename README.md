@@ -1,5 +1,5 @@
-# Bot workflows
-
+# Slack Images Bot
+Slack bot send a relaxing image like a beauty girl
 ## Commands
 |  Name | Command  | Description  | Already  |
 |---|---|---|---|
