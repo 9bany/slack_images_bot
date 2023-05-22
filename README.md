@@ -20,6 +20,16 @@ $ instaloader profile <instagram_username>  --no-captions --no-videos --no-video
 ```
 ## Docker
 
+### Env
+```
+DB_DRIVER=postgres 
+DB_NAME='images_demo' 
+DB_SOURCE='postgresql://user:pass@localhost:port/
+dbname' 
+SLACK_APP_TOKEN=''
+SLACK_BOT_TOKEN='' 
+```
+
 ```
 $ docker run --env-file ./.env ghcr.io/9bany/bot_workflows
 ```
