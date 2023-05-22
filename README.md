@@ -16,7 +16,7 @@ Please read this: https://github.com/shomali11/slacker#preparing-your-slack-app
 ### Tools 
 - [instaloader](https://github.com/instaloader/instaloader)
 ```
-$ instaloader profile ulzzanggirlth  --no-captions --no-videos --no-video-thumbnails --no-metadata-json
+$ instaloader profile <instagram_username>  --no-captions --no-videos --no-video-thumbnails --no-metadata-json
 ```
 ## Docker
 
