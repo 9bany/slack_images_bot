@@ -9,6 +9,15 @@ Slack bot send a relaxing image like a beauty girl
 To use bot_images you'll need to create a Slack App, either manually or with an app manifest.
 
 Please read this: https://github.com/shomali11/slacker#preparing-your-slack-app
+
+## Crawl data
+- Down image datas to `data/images` folder
+- Use `scripts/main.go` to upload them to db
+### Tools 
+- [instaloader](https://github.com/instaloader/instaloader)
+```
+$ instaloader profile ulzzanggirlth  --no-captions --no-videos --no-video-thumbnails --no-metadata-json
+```
 ## Docker
 
 ```
