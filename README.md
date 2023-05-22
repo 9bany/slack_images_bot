@@ -13,14 +13,14 @@ Please read this: https://github.com/shomali11/slacker#preparing-your-slack-app
 ## Crawl data
 - Down image datas to `data/images` folder
 - Use `scripts/main.go` to upload them to db
-### Tools 
-- [instaloader](https://github.com/instaloader/instaloader)
+- Tools 
+    - [instaloader](https://github.com/instaloader/instaloader)
 ```
 $ instaloader profile <instagram_username>  --no-captions --no-videos --no-video-thumbnails --no-metadata-json
 ```
 ## Docker
 
-### Env
+- Env file
 ```
 DB_DRIVER=postgres 
 DB_NAME='images_demo' 
@@ -29,7 +29,7 @@ dbname'
 SLACK_APP_TOKEN=''
 SLACK_BOT_TOKEN='' 
 ```
-
+Command
 ```
 $ docker run --env-file ./.env ghcr.io/9bany/bot_workflows
 ```
