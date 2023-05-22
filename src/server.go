@@ -58,11 +58,9 @@ func (server *Server) initDefault() {
 
 func (server *Server) initCommands() {
 	relaxCommand := cmds.NewRelaxCommand(server.db)
-	newsComand := cmds.NewNewsCommand()
 	// commands
 	server.slackBot.Command(cmds.PingCommandDefinition())
 	server.slackBot.Command(relaxCommand.CommandDefinition())
-	server.slackBot.Command(newsComand.CommandDefinition())
 	// help
 	server.slackBot.Help(cmds.HelpCommandDefinition())
 }
