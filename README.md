@@ -4,7 +4,11 @@ Slack bot send a relaxing image like a beauty girl
 |  Name | Command  | Description  | Already  |
 |---|---|---|---|
 | Relaxing  | `relax`  | Will send a relaxing message | YES  |
+## Preparing your Slack App
 
+To use bot_images you'll need to create a Slack App, either manually or with an app manifest.
+
+Please read this: https://github.com/shomali11/slacker#preparing-your-slack-app
 ## Docker
 
 ```
